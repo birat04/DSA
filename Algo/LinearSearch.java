@@ -1,3 +1,4 @@
+package Algo;
 import java.util.Scanner;
 public class LinearSearch {
     public static int linearSearch(int[] arr, int target) {

@@ -1,3 +1,4 @@
+package Algo;
 import java.util.Scanner;
 
 public class FactorialRecursive {
