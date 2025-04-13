@@ -2,7 +2,7 @@ import java.util.*;
 
 public class ArrayProblems2 {
     
-    // 1. Find Minimum in Rotated Sorted Array
+    
     public static int findMinInRotatedArray(int[] nums) {
         int left = 0;
         int right = nums.length - 1;
@@ -20,7 +20,6 @@ public class ArrayProblems2 {
         return nums[left];
     }
     
-    // 2. Search in Rotated Sorted Array
     public static int searchInRotatedArray(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
@@ -32,7 +31,7 @@ public class ArrayProblems2 {
                 return mid;
             }
             
-            // Left half is sorted
+           
             if (nums[left] <= nums[mid]) {
                 if (target >= nums[left] && target < nums[mid]) {
                     right = mid - 1;
@@ -40,7 +39,7 @@ public class ArrayProblems2 {
                     left = mid + 1;
                 }
             }
-            // Right half is sorted
+           
             else {
                 if (target > nums[mid] && target <= nums[right]) {
                     left = mid + 1;
@@ -53,7 +52,7 @@ public class ArrayProblems2 {
         return -1;
     }
     
-    // 3. Find Peak Element
+    
     public static int findPeakElement(int[] nums) {
         int left = 0;
         int right = nums.length - 1;
@@ -71,11 +70,11 @@ public class ArrayProblems2 {
         return left;
     }
     
-    // 4. Find First and Last Position of Element in Sorted Array
+   
     public static int[] searchRange(int[] nums, int target) {
         int[] result = {-1, -1};
         
-        // Find first position
+       
         int left = 0;
         int right = nums.length - 1;
         
@@ -95,7 +94,7 @@ public class ArrayProblems2 {
             return result;
         }
         
-        // Find last position
+      
         right = nums.length - 1;
         while (left <= right) {
             int mid = left + (right - left) / 2;
@@ -111,7 +110,7 @@ public class ArrayProblems2 {
         return result;
     }
     
-    // 5. Kth Largest Element in Array
+    
     public static int findKthLargest(int[] nums, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         
@@ -125,11 +124,11 @@ public class ArrayProblems2 {
         return minHeap.peek();
     }
     
-    // 6. Find All Numbers Disappeared in Array
+   
     public static List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> result = new ArrayList<>();
         
-        // Mark numbers as negative
+     
         for (int i = 0; i < nums.length; i++) {
             int index = Math.abs(nums[i]) - 1;
             if (nums[index] > 0) {
@@ -137,7 +136,7 @@ public class ArrayProblems2 {
             }
         }
         
-        // Find positive numbers
+      
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > 0) {
                 result.add(i + 1);
@@ -147,7 +146,7 @@ public class ArrayProblems2 {
         return result;
     }
     
-    // 7. Subarray Sum Equals K
+   
     public static int subarraySum(int[] nums, int k) {
         Map<Integer, Integer> prefixSum = new HashMap<>();
         prefixSum.put(0, 1);
@@ -166,7 +165,7 @@ public class ArrayProblems2 {
         return count;
     }
     
-    // 8. Maximum Subarray
+ 
     public static int maxSubarray(int[] nums) {
         int maxSoFar = nums[0];
         int maxEndingHere = nums[0];
@@ -179,7 +178,7 @@ public class ArrayProblems2 {
         return maxSoFar;
     }
     
-    // 9. Best Time to Buy and Sell Stock
+  
     public static int maxProfit(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
