@@ -194,7 +194,7 @@ public class ArrayProblems2 {
         return maxProfit;
     }
     
-    // 10. Longest Consecutive Sequence
+    
     public static int longestConsecutive(int[] nums) {
         Set<Integer> numSet = new HashSet<>();
         for (int num : nums) {
@@ -221,44 +221,44 @@ public class ArrayProblems2 {
     }
     
     public static void main(String[] args) {
-        // Test cases
+      
         
-        // 1. Find Minimum in Rotated Sorted Array
+        
         int[] rotatedArray = {4, 5, 6, 7, 0, 1, 2};
         System.out.println("Minimum in rotated array: " + findMinInRotatedArray(rotatedArray));
         
-        // 2. Search in Rotated Sorted Array
+        
         System.out.println("Search in rotated array (target=0): " + searchInRotatedArray(rotatedArray, 0));
         
-        // 3. Find Peak Element
+        
         int[] peakArray = {1, 2, 3, 1};
         System.out.println("Peak element index: " + findPeakElement(peakArray));
         
-        // 4. Find First and Last Position
+        
         int[] rangeArray = {5, 7, 7, 8, 8, 10};
         System.out.println("Range of target 8: " + Arrays.toString(searchRange(rangeArray, 8)));
         
-        // 5. Kth Largest Element
+        
         int[] kthArray = {3, 2, 1, 5, 6, 4};
         System.out.println("3rd largest element: " + findKthLargest(kthArray, 3));
         
-        // 6. Find Disappeared Numbers
+       
         int[] disappearedArray = {4, 3, 2, 7, 8, 2, 3, 1};
         System.out.println("Disappeared numbers: " + findDisappearedNumbers(disappearedArray));
         
-        // 7. Subarray Sum Equals K
+       
         int[] sumArray = {1, 1, 1};
         System.out.println("Number of subarrays with sum 2: " + subarraySum(sumArray, 2));
         
-        // 8. Maximum Subarray
+      
         int[] maxSubarray = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         System.out.println("Maximum subarray sum: " + maxSubarray(maxSubarray));
         
-        // 9. Best Time to Buy and Sell Stock
+       
         int[] prices = {7, 1, 5, 3, 6, 4};
         System.out.println("Maximum profit: " + maxProfit(prices));
         
-        // 10. Longest Consecutive Sequence
+      
         int[] sequenceArray = {100, 4, 200, 1, 3, 2};
         System.out.println("Longest consecutive sequence: " + longestConsecutive(sequenceArray));
     }
