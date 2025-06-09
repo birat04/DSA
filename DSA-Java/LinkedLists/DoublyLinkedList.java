@@ -34,12 +34,31 @@ public class DoublyLinkedList {
         while (current != null && current.data != value){
             current = current.Next;
         }
-        if(current == null){
+        if(current != null){
             if(current.prev != null) current.prev.Next = current.Next;
-            if(current.Next!= null) current.Next.prev = current.prev;
+            if(current.Next != null) current.Next.prev = current.prev;
         }
-
-
     }
+    public void displayForward(){
+        DNode current = Head;
+        System.out.print("Forward: ");
+        while (current != null){
+            System.out.print(current.data + "<->");
+            current = current.Next;
+        }
+        System.out.println("null");
+    }
+    public static void main(String[] args) {
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.insert(5);
+        list.insert(15);
+        list.insert(25);
+        list.insert(35);
+        list.displayForward();
+        list.delete(25);
+        list.displayForward();
+        
+    }
+
     
 }
